@@ -12,8 +12,8 @@ var tol ="";
 var ig ="";
 function beker() {
 
-    tol = ID("tol").value;
-    ig = ID("ig").value;
+    tol = Number(ID("tol").value);
+    ig = Number(ID("ig").value);
 }
 var tomb = [];
 
@@ -38,8 +38,8 @@ function getRndInteger(min, max) {
 
 function feltolt() {
 
-    tomb = [];
-    for (var i = 0; i < tomb.length; i++) {
+   // tomb = [];
+    for (var i = 0; i < max-min; i++) {
         tomb[i] = getRndInteger(tol, ig);
     }
 
