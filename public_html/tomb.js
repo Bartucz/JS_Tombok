@@ -81,8 +81,8 @@ function init() {
 function visszafele(){
     //var vissza=tomb.reverse();
     var revtomb=[];
-    for (var i = 0; i < tomb.length; i++) {
-        revtomb[i]=tomb[tomb.length-i];
+    for (var i = 0; i <= tomb.length; i++) {
+        revtomb[i]=tomb[tomb.length-(i+1)];
     }
     return /*vissza*/ revtomb;
 }
