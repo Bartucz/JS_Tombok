@@ -8,20 +8,22 @@ function ID(nev) {
 
 
 
-var tol ="";
-var ig ="";
+var tol =0;
+var ig =0;
 function beker() {
 
     tol = ID("tol").value;
-    ig = ID("ig").value;
+    ig = ID("ig").value;;
+    return [tol, ig];
 }
 var tomb = [];
 
 function dolgozz() {
 
-    beker();
+    //beker();
     feltolt();
     osszegzes();
+    visszafele();
 
 
     var kiir = ID("kiir");
@@ -30,6 +32,9 @@ function dolgozz() {
 
     var kiir = ID("osszeg");
     kiir.innerHTML = "Összeg " + osszegzes();
+    
+    var kiir=ID("vissza");
+    kiir.innerHTML="A tömb visszafele "+visszafele();
 
 }
 function getRndInteger(min, max) {
@@ -39,8 +44,12 @@ function getRndInteger(min, max) {
 function feltolt() {
 
     tomb = [];
-    for (var i = 0; i < tomb.length; i++) {
-        tomb[i] = getRndInteger(tol, ig);
+    var szamok=beker();
+    var meret=szamok[1]-szamok[0];
+    var min=parseInt(szamok[0]);
+    var max=parseInt(szamok[1]);
+    for (var i = 0; i < meret; i++) {
+        tomb[i] = getRndInteger(min,max);
     }
 
 
@@ -76,8 +85,7 @@ function init() {
 
 function visszafele(){
     var vissza=tomb.reverse();
-    var kiir=ID("vissza");
-    kiir.innerHTML+=vissza;
+    return vissza;
 }
 
 
