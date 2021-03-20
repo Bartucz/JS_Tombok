@@ -70,5 +70,11 @@ function init() {
 }
 
 
+function visszafele(){
+    var vissza=tomb.reverse();
+    var kiir=ID("vissza");
+    kiir.innerHTML+=vissza;
+}
+
 
 window.addEventListener("load", init, false);
