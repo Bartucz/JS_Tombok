@@ -14,7 +14,6 @@ function beker() {
 
     tol = Number(ID("tol").value);
     ig = Number(ID("ig").value);
-
 }
 var tomb = [];
 
@@ -29,9 +28,9 @@ function dolgozz() {
     var kiir = ID("kiir");
 
     kiir.innerHTML = "Jó reggelt <br>" + tomb;
-
-    var kiir = ID("osszeg");
-    kiir.innerHTML = "Összeg " + osszegzes();
+    
+    var osszeg = ID("osszeg");
+    osszeg.innerHTML = "Összeg " + osszegzes();
     
     var kiir=ID("vissza");
     kiir.innerHTML="A tömb visszafele "+visszafele();
