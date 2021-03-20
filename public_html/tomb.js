@@ -7,7 +7,7 @@ function ID(nev) {
 
 
 
-var adat = "";
+
 var tol ="";
 var ig ="";
 function beker() {
@@ -39,7 +39,7 @@ function getRndInteger(min, max) {
 function feltolt() {
 
     tomb = [];
-    for (var i = 0; i < adat; i++) {
+    for (var i = 0; i < tomb.length; i++) {
         tomb[i] = getRndInteger(tol, ig);
     }
 
