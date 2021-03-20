@@ -28,8 +28,8 @@ function dolgozz() {
 
     kiir.innerHTML = "Jó reggelt <br>" + tomb;
 
-    var kiir = ID("osszeg");
-    kiir.innerHTML = "Összeg " + osszegzes();
+    var osszeg = ID("osszeg");
+    osszeg.innerHTML = "Összeg " + osszegzes();
 
 }
 function getRndInteger(min, max) {
@@ -39,7 +39,7 @@ function getRndInteger(min, max) {
 function feltolt() {
 
    // tomb = [];
-    for (var i = 0; i < max-min; i++) {
+    for (var i = 0; i < ig-tol; i++) {
         tomb[i] = getRndInteger(tol, ig);
     }
 
